@@ -80,7 +80,7 @@ router.post("/signin", (req, res, next) => {
                             email: user[0].email,
                             userId: user[0]._id
                         }, process.env.JWT_KEY, {
-                            expiresIn: "12h"
+                            expiresIn: "1h"
                         });
 
                         return res.status(200).json({
@@ -113,4 +113,5 @@ router.delete("/:userId", (req, res, next) => {
         });
     });
 });
+
 module.exports = router;
