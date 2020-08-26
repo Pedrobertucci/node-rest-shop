@@ -2,62 +2,51 @@
 
 This project was create to learn Node.js
 
+**header** Authorization - JWT 
+
 ## User Manager
-
 ### Sign up user
-
 `POST /user/signup`
 
-**Body**
-```bash
-{ "email": "your email", "password": "your password" }
-```
-**Response** | Status: 201
-```bash
-{ "message": "User created" }
-```
-**Response** | Status: 409
-```bash
-{ "message": "Mail already registered" }
-```
----
-
 ### Sign in user
-**header** Authorization - JWT 
-
 `POST /user/signin`
 
-**Body**
-```bash
-{ "email": "your email", "password": "your password" }
-```
-**Response** | Status: 200
-```bash
-{ "message": "Auth successful", "token": "Your JWT" }
-```
-* User data inside in JWT
-
-**Response** | Status: 401
-```bash
-{ "message": "Auth failed" }
-```
-**Response** | Status: 404
-```bash
-{ "message": "User not found" }
-```
----
-
 ### Delete user
-**header** Authorization - JWT 
-
 `DELETE /user/:userId`
 
-**Response** | Status: 200
-```bash
-{ "message": "User Deleted" }
-```
-**Response** | Status: 409
-```bash
-{ "message": "Mail already registered" }
-```
 ---
+
+## Products
+### Create Product
+`POST /products/`
+
+### Update Product
+`PATCH /products/:productId`
+
+### Delete Product
+`DELETE /products/:productId`
+
+### Get all Product
+`GET /products/`
+
+### Get Product
+`GET /products/:productId`
+
+---
+
+## Orders
+
+### Create Order
+`POST /orders/`
+
+### Update Order
+`PATCH /orders/:orderId`
+
+### Delete Order
+`DELETE /orders/:orderId`
+
+### Get All Orders
+`GET /orders/`
+
+### Get Order
+`GET /orders/`
